@@ -26,7 +26,7 @@ void Apartment::setArea(float pArea)
 
 void Apartment::setHumans(int pNumberHumans, Human* pHumans)
 {
-	if (!pHumans)
+	if (!pHumans || pNumberHumans < 0)
 	{
 		std::cout << "[ Apartment INFO ] invalid value for set humans!\n";
 		return;

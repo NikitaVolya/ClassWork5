@@ -1,6 +1,6 @@
 #include "Human.h"
 
-const Human& Human::getOlder(Human& other)
+const Human& Human::getOlder(Human& other) const
 {
 	if (other.age > age)
 		return other;

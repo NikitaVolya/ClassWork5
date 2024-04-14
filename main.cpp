@@ -7,15 +7,14 @@
 int main()
 {
 	Human a("Nikita", 15);
-	Human b("Misha", 18);
 	Human c = a;
-	Human* humans = new Human[3] {a, b, c};
+	Human* humans = new Human[3]{ a, {"Misha", 18}, c};
 	
 	a.print();
-	b.print();
+	humans[1].print();
 	c.print();
 
-	a.getOlder(b).print();
+	a.getOlder(humans[1]).print();
 
 	Apartment apartementA(15.2f, 5);
 	apartementA.print();

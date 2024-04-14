@@ -10,14 +10,14 @@ private:
 	unsigned int age;
 public:
 	Human() : name(nullptr), age(0) {}
-	Human(const char* pName, const int pAge) : name(nullptr), age(pAge) { setName(pName); }
-	Human(Human& pOther) : Human(pOther.name, pOther.age) {}
+	Human(const char* pName, int pAge) : name(nullptr), age(pAge) { setName(pName); }
+	Human(const Human& pOther) : Human(pOther.name, pOther.age) {}
 	~Human() { if (name) delete[] name; }
 
 	const char* getName() const { return name; }
 	int getAge() const { return age; }
 
-	const Human& getOlder(Human& other);
+	const Human& getOlder(Human& other) const;
 
 	void setAge(int pAge);
 	void setName(const char* pString);
